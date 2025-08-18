@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Capacitación para docentes: Domina el aula virtual con Moodle</title>
+  <title>Capacitación para docentes: Domina el aula presencial con Moodle</title>
   <meta name="description" content="Flyer interactivo: Capacitación para docentes - Domina el aula virtual con Moodle" />
   <style>
     :root{
@@ -170,10 +170,9 @@
         <thead><tr><th>Nombre</th><th>Correo</th><th>Sesión</th><th>Fecha</th></tr></thead>
         <tbody></tbody>
       </table>
-      <p class="notice">Los datos se guardan solo en tu navegador (localStorage). Puedes exportarlos como CSV.</p>
     </section>
 
-    <p class="footer">© 2025 • Capacitación Docente • Moodle</p>
+    <p class="footer">©RobertClaros 2025 • Capacitación Docente • Moodle</p>
   </div>
 
 <script>
@@ -250,7 +249,7 @@ SESSIONS.forEach(s=>{
     <p class="meta">${fmtDate(s.startISO)} (UTC-5)</p>
     <div class="row" style="margin-top:8px">
      <a href="https://aulavirtualvrht.edu.pe/course/view.php?id=91" class="btn primary">
-    📅 Descargar .ics
+    Aula Virtual .ics
 </a>
       <a class="btn accent" href="${googleCalendarUrl({title:s.title,startISO:s.startISO,endISO:s.endISO})}" target="_blank" rel="noopener">🗓️ Google Calendar</a>
     </div>
