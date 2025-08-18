@@ -80,7 +80,7 @@
       <div class="stack">
         <button id="btnShare" class="btn">🔗 Compartir</button>
         <button id="btnExport" class="btn">⬇️ Exportar inscripciones (CSV)</button>
-        <span class="chip">📍 Modalidad: Virtual</span>
+        <span class="chip">📍 Modalidad: Presencial</span>
         <span class="chip">⏱️ Duración: 2 sesiones</span>
         <div style="margin-left:auto" class="stack">
           <span class="chip">🌗 Tema</span>
@@ -223,7 +223,7 @@ function googleCalendarUrl({title, startISO, endISO, details, location}){
     dates: new Date(startISO).toISOString().replace(/[-:]/g,'').slice(0,15)+'Z/'+
            new Date(endISO).toISOString().replace(/[-:]/g,'').slice(0,15)+'Z',
     details: details||'Capacitación docente: Moodle',
-    location: location||'Virtual'
+    location: location||'Presencial'
   });
   return 'https://www.google.com/calendar/render?'+p.toString();
 }
@@ -249,7 +249,10 @@ SESSIONS.forEach(s=>{
     </div>
     <p class="meta">${fmtDate(s.startISO)} (UTC-5)</p>
     <div class="row" style="margin-top:8px">
-      <button class="btn primary" data-ics="${s.id}">📅 Descargar .ics</button>
+     <button class="btn primary" data-ics="${s.id}" 
+        onclick="window.location.href='https://aulavirtualvrht.edu.pe/course/view.php?id=91'">
+    📅 Descargar .ics
+</button>
       <a class="btn accent" href="${googleCalendarUrl({title:s.title,startISO:s.startISO,endISO:s.endISO})}" target="_blank" rel="noopener">🗓️ Google Calendar</a>
     </div>
   `;
