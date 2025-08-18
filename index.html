@@ -355,15 +355,20 @@ themeSwitch.addEventListener('click', ()=>{
 
 function applyTheme(mode){
   if(mode==='light'){
+    // Fondo claro
     document.documentElement.style.setProperty('--bg','#f6f8ff');
     document.documentElement.style.setProperty('--card','#ffffff');
-    document.documentElement.style.setProperty('--text','#0f1b33');
+    document.documentElement.style.setProperty('--text','#0f1b33'); // texto oscuro
+    document.documentElement.style.setProperty('--muted','#444c63'); // gris oscuro
   }else{
+    // Fondo oscuro
     document.documentElement.style.setProperty('--bg','#0e1726');
     document.documentElement.style.setProperty('--card','#111a2b');
-    document.documentElement.style.setProperty('--text','#e6eefc');
+    document.documentElement.style.setProperty('--text','#e6eefc'); // texto claro
+    document.documentElement.style.setProperty('--muted','#6b87b1'); // gris claro
   }
 }
+
 </script>
 </body>
 </html>
